@@ -20,3 +20,22 @@ app.run(debug=True) # if i don't tell my app to run it's not going to strat the 
 # debug mode is for errors, tells me what is wrong in my code.
 
 # after coping this to the terminal i can copy the http address and run it on my browser . the file is local!
+
+# set the project root directory as the static folder, you can set others.
+app = Flask(__name__, static_folder='/home/dubspher/mysite/')
+
+@app.route('/')
+def static_file():
+    return app.send_static_file('templates/index.html')
+
+if __name__ == "__main__":
+    app.run()
+
+    app = Flask(__name__, static_url_path="/static", static_folder='/home/dubspher/mysite/static')
+
+@app.route('/')
+def static_file():
+    return app.send_static_file('index.html')
+
+if __name__ == "__main__":
+    app.run()
