@@ -127,3 +127,7 @@ a{
   right: 0;
   bottom:0;
 }
+#suggestions {
+  width: 200px;
+  height: 200px;
+}
