@@ -42,27 +42,23 @@ busiest hours, time limit, amount of electrical sockets,
 how noisy is the place (user based rating 1-10), are the people talkative...*/!-->
 <div id="bottom">
 
-<form>
   <p>Let's Keep In Touch !</p>
-  <h4>Please let me know if you have more info to add to this site!</h4>
+  <h4>Please let me know if you have more information that could be added to this site!</h4>
 </div>
 <div>
-  {% if name %}
-  <p>Hello, {{name}}!</p>
-  {% else %}
-  <p>Hello you!</p>
-  {% endif %}
-
-  <p>Let's keep in touch!</p>
-    <div id="contact form">
-        <form method="post" action="/Suggestions">
+    <div id="suggestion_form">
+      <p>Please write your suggestions below</p>
+      <form method="post" action="C:/Users/Mandy/Documents/cfg_python/cfg_py/templates/suggestion_submit.html">
+        <label for="Suggestions">Suggestions box:</label>
+        <input type="comments" id="suggestions" name="suggestion" required="required">
+        <br></br>
           <label for="email">Email address:</label>
           <input type="email" id="email" name="email" required="required">
           <input type="submit" value="Submit" id="submit-button">
           </form>
     </div>
 </div>
-</form>
+
 
 <div><img class="cat" src="../static/images/cat wink.gif">
 </div>
